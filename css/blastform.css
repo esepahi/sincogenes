@@ -1,0 +1,63 @@
+.blastform{
+	margin-left: 10%;
+	width: 88%;
+	position: relative;
+	padding: 20px;
+	border: 1px solid #eaedf2; background-color: #f7f8f9; 
+
+}
+.blastnav-e1{width: 60%;   float:left;}
+.blastnav-e2{box-shadow: -1px 0px grey; width: 40%; float: right;  }
+.blastnav-e3{width: 100%; clear: both;}
+.blastparag{margin-right:15%; font-size:14px;}
+.error{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	width: 300px;
+	height: 50px;
+	margin-top: -25px; /* Half the height */
+	margin-left: -150px; /* Half the width */
+	vertical-align: middle;
+	border: 1px solid red;
+	box-shadow: 0px 0px 3px #ccc, 0 10px 15px #eee inset;
+	border-radius: 2px;
+	color: red;
+	text-align: center;
+	font-weight: bold;
+	line-height: 50px;
+	font-family: "Times New Roman", Georgia, Serif;
+}
+.output{
+	position: relative;
+	top: 20%;
+	box-sizing: border-box;
+	width: 650px;
+	height: auto;
+	margin: 0 auto;
+	vertical-align: middle;
+	border: 3px solid gray;
+	font-size: 12px;
+	box-shadow: 0px 0px 3px #ccc, 0 10px 15px #eee inset;
+	border-radius: 2px;
+}
+.space {
+	padding: 10px;
+}
+abbr {
+	text-decoration: none;
+	color: blue;
+	cursor: pointer;
+}
+.effect {
+	border: 1px solid #aaa;
+	border-radius: 2px;
+	max-width: 90%;
+}
+.heffect {
+    border: 0;
+    height: 1px;
+    background: blue;
+}
+a { text-decoration: none; }
+table.hover {font-family: verdana, arial, sans-serif; font-size: 13px; color: #333333;}
