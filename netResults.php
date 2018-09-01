@@ -37,21 +37,30 @@ include ("header.html");
 <div id="content">
 <!--  --> 
 <div class="intronet">
-<p> <font color="green">Green</font> node: root (query) node.</p>
-<p> <font color="orange">Orange</font> node: homolog of root node.</p>
-<p> <font color="red">Red</font> node: homolog of homolog of root node.</p>
-<p> <font color="Blue">Blue</font> edge: paralogy relation.</p>
-<p> <font color="skyblue">SkyBlue</font> edge: "have common domain" relation.</p>
+<p> <font color="green">Green</font> node: root (your search term) node.</p>
+<p> <font color="orange">Orange</font> node(s): homolog of root node.</p>
+<p> <font color="red">Red</font> node(s): homolog of homolog of root node.</p>
+<p> <font color="Blue">Blue</font> edge(s): paralogy relation.</p>
+<p> <font color="skyblue">SkyBlue</font> edge(s): "have common domain" relation.</p>
+<p> You can reshape this network by dragging nodes.</p>
 <br>
-<form method="get" action="file.doc">
-   <button class="netbut" type="submit">Browse raw blast results</button>
-</form>
-<form method="get" action="file.doc">
-   <button value="salam" class="netbut" type="submit">Download network as image</button>
-</form>
-<form method="get"  action="file.doc">
-   <button class="netbut" type="submit">Download fasta sequences</button>
-</form>
+<nav >
+   <button class="netbut" >Browse raw blast results</button>
+</nav>
+<br>
+<nav >
+<a  class="netbut" id= "netlink" href = "#" onclick ="myFunction();" download= "netimage.png">Download (current shape of) network as png</a>
+</nav>
+<script>
+function myFunction() {
+var url = cy.png();
+document.getElementById("netlink").setAttribute("href",url);
+}
+</script>
+<br>
+<nav >
+   <button class="netbut">Download fasta sequences</button>
+</nav>
 </div>
 	<div class="net bolder formField">
             <?php
