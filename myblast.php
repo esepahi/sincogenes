@@ -213,21 +213,26 @@ if(isset($_POST['submit']))
 	<p style="padding: 0 3px 0 3px;">
 	Program
 	<select class="effect" id="program" name="program">
-		<option value="blastn.exe">blastn</option>
-		<option selected value="blastp.exe">blastp</option>
-		<option value="blastx.exe">blastx</option>
-		<option value="tblastn.exe">tblastn</option>
-		<option value="tblastx.exe">tblastx</option>
-		<option value="deltablastx.exe">deltablast</option>
-		<option value="psiblast.exe">psiblast</option>
-		<option value="rpsblast.exe">rpsblast</option>
-		<option value="rpstblastn.exe">rpstblastn</option>
+		<option value="blastn">blastn</option>
+		<option selected value="blastp">blastp</option>
+		<option value="blastx">blastx</option>
+		<option value="tblastn">tblastn</option>
+		<option value="tblastx">tblastx</option>
+		<option value="deltablastx">deltablast</option>
+		<option value="psiblast">psiblast</option>
+		<option value="rpsblast">rpsblast</option>
+		<option value="rpstblastn">rpstblastn</option>
 	</select>
 	Database
 	<select class="effect" id="datalib" name="datalib">
 		<option value='-db nr -remote'>nr</option>
 		<option value='-db swissprot -remote'>swissprot</option>
-		<option selected value="-db pdb -remote">pdb</option>
+		<option selected value='-db pdb -remote'>pdb</option>
+		<option value='-db refseq_protein -remote'>refseq_protein</option>
+		<option value='-db SMARTBLAST/landmark -remote'>landmark</option>
+		<option value='-db pat -remote'>pat</option>
+		<option value='-db env_nr -remote'>env_nr</option>	
+		<option value='-db tsa_nr -remote'>tsa_nr</option>	
 		<option value="-db db/test_na">test dna</option>
 		<option value="-db db/test_aa">test aa</option>
 		<option value="-db db/pdt">pdtdb</option>
@@ -235,18 +240,18 @@ if(isset($_POST['submit']))
 	</p>
 	<p style="padding: 0 3px 0 3px;">
 	Enter sequence below in 
-	<abbr title="&gt;gi|532319|pir|TVFV2E|TVFV2E envelope protein&#13;ELRLRYCAPAGFALLKCNDADYDGFKTNCSNVSVVHCTNLMNTTVTTGLLLNGSYSENRT&#13;QIWQKHRTSNDSALILLNKHYNLTVTCKRPGNKTVLPVTIMAGLVFHSQKYNLRLRQAWC&#13;HFPSNWKGAWKEVKEEIVNLPKERYRGTNDPKRIFFQRQWGDPETANLWFNCHGEFFYCK&#13;MDWFLNYLNNLTVDADHNECKNTSGTKSGNKRAPGP">FASTA</abbr>  format (<a style="font-size:small" onclick="javascript:document.getElementById('program').value='blastp.exe';
+	<abbr title="&gt;gi|532319|pir|TVFV2E|TVFV2E envelope protein&#13;ELRLRYCAPAGFALLKCNDADYDGFKTNCSNVSVVHCTNLMNTTVTTGLLLNGSYSENRT&#13;QIWQKHRTSNDSALILLNKHYNLTVTCKRPGNKTVLPVTIMAGLVFHSQKYNLRLRQAWC&#13;HFPSNWKGAWKEVKEEIVNLPKERYRGTNDPKRIFFQRQWGDPETANLWFNCHGEFFYCK&#13;MDWFLNYLNNLTVDADHNECKNTSGTKSGNKRAPGP">FASTA</abbr>  format (<a style="font-size:small" onclick="javascript:document.getElementById('program').value='blastp';
 	document.getElementById('datalib').value='-db db/pdt';
 	document.getElementById('sequence').value='>tr|A0PQ23|A0PQ23_MYCUA Chorismate pyruvate-lyase\nMLAVLPEKREMTECHLSDEEIRKLNRDLRILIATNGTLTRILNVLANDEIVVEIVKQQIQ\nDAAPEMDGCDHSSIGRVLRRDIVLKGRRSGIPFVAAESFIAIDLLPPEIVASLLETHRPI\nGEVMAASCIETFKEEAKVWAGESPAWLELDRRRNLPPKVVGRQYRVIAEGRPVIIITEYF\nLRSVFEDNSREEPIRHQRSVGTSARSGRSICT';" href="javascript:void()">DEMO</a>)
 	<br />
 	<textarea class="effect" style="min-width: 498px;" name="sequence" id="sequence" rows=6 cols=60></textarea>
 	<br />
 	Or load it from disk 
-	<input class="effect" type="file" name="seqfile">
+	<input class="effect" type="file" name="seqfile" />
 	</p>
 	<p style="padding: 0 3px 0 3px;">
-	<input class="effect" type="button" name="clear" value="Clear Sequence" onClick="document.getElementById('sequence').value=''; document.getElementById('sequence').focus();">
-	<input class="effect" type="submit" name="submit" value="Search">
+	<input class="effect" type="button" name="clear" value="Clear Sequence" onClick="document.getElementById('sequence').value=''; document.getElementById('sequence').focus();" />
+	<input class="effect" type="submit" name="submit" value="Search" />
 	</p>
 	</form>
 	</div>
